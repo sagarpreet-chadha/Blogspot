@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+
+<table border="1" style="border-collapse: collapse; background-color: #c5c3c3; ">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+     
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.reverse.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.content %></td>
+     
+        <td colspan="3" style="background-color: #c5c3c3;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <%= link_to 'Show', post %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <% if user_signed_in? %>
+
+          <% if current_user.id == post.user_id %>
+               <%= link_to 'Edit', edit_post_path(post) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               
+               <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <% end %>
+          
+       <% end %>
+       </td>
+        </tr>
+       
+    <% end %>
+  </tbody>
+</table>
+
+<br><br><br><br><br>
+
+<span style="background-color: black; padding:5px"><%= link_to 'New Post', new_post_path %></span>

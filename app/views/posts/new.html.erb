@@ -1,0 +1,11 @@
+
+
+<% if !user_signed_in? %>
+ <h1> You are not Signed in !!</h1>
+<% else %>
+	<h1>New Post</h1>
+	<%= render 'form' %>
+
+<% end %>
+<span style="background-color: black; padding:5px">
+<%= link_to 'Back', posts_path %></span>

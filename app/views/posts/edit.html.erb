@@ -1,0 +1,21 @@
+
+
+<% if !user_signed_in? %>
+	<h1> You Are Not Signed IN !! </h1> 
+<% elsif @post.user_id != current_user.id %>
+	<h1>  This is not your Post !! </h1> 
+<% else %>
+
+<h1>Editing Post</h1>
+
+
+<%= render 'form' %>
+
+
+<% end %>
+<span style="background-color: black; padding:5px">
+<%= link_to 'Show', @post %> 
+</span>
+<span style="background-color: black; padding:5px">
+<%= link_to 'Back', posts_path %>
+</span>
