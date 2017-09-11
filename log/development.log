@@ -1,0 +1,18 @@
+
+
+Started GET "/" for ::1 at 2017-09-02 18:41:28 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/sagarpreetchadha/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.8/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for ::1 at 2017-09-02 18:41:31 +0530
+Processing by Rails::InfoController#properties as */*
+  Rendered /Users/sagarpreetchadha/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.8/lib/rails/templates/rails/info/properties.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 42.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2017-09-02 18:42:10 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/sagarpreetchadha/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.8/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
